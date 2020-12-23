@@ -1,6 +1,23 @@
 # Changelog
 All Notable changes to `oauth2-apple` will be documented in this file
 
+## 0.3.1 - 2020-12-23
+
+### Added
+- Support php 7.4
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Support php 7.4
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
 ## 0.3.0 - 202X-XX-XX
 
 ### Added

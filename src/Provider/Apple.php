@@ -2,6 +2,7 @@
 
 namespace League\OAuth2\Client\Provider;
 
+use DateTimeImmutable;
 use Exception;
 use InvalidArgumentException;
 use Lcobucci\JWT\Builder;
@@ -209,13 +210,13 @@ class Apple extends AbstractProvider
     public function getAccessToken($grant, array $options = [])
     {
         $signer = new Sha256();
-        $time = time();
+        $DateTimeImmutable = new DateTimeImmutable();
 
         $token = (new Builder())
             ->issuedBy($this->teamId)
             ->permittedFor('https://appleid.apple.com')
-            ->issuedAt($time)
-            ->expiresAt($time + 600)
+            ->issuedAt($DateTimeImmutable)
+            ->expiresAt($DateTimeImmutable->setTimestamp(time() + 600))
             ->relatedTo($this->clientId)
             ->withClaim('sub', $this->clientId)
             ->withHeader('alg', 'ES256')

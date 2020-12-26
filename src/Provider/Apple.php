@@ -218,7 +218,7 @@ class Apple extends AbstractProvider
             ->issuedAt($DateTimeImmutable)
             ->expiresAt($DateTimeImmutable->setTimestamp(time() + 600))
             ->relatedTo($this->clientId)
-            ->withClaim('sub', $this->clientId)
+            ->set('sub', $this->clientId)
             ->withHeader('alg', 'ES256')
             ->withHeader('kid', $this->keyFileId)
             ->getToken($signer, $this->getLocalKey());

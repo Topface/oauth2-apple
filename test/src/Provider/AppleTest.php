@@ -150,7 +150,7 @@ class AppleTest extends \PHPUnit_Framework_TestCase
 		    ->issuedAt($DateTimeImmutable)
 		    ->expiresAt($DateTimeImmutable->setTimestamp(time() + 600))
 		    ->relatedTo('test-client')
-		    ->withClaim('sub', 'test')
+		    ->set('sub', 'test')
 		    ->withHeader('alg', 'RS256')
 		    ->withHeader('kid', 'test')
 		    ->getToken();

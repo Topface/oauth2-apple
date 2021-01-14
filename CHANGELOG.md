@@ -1,6 +1,10 @@
 # Changelog
 All Notable changes to `oauth2-apple` will be documented in this file
 
+## [0.3.4] - 2021-01-14
+### Changed
+* Lowercase composer name
+
 ## 0.3.0 - 202X-XX-XX
 
 ### Added

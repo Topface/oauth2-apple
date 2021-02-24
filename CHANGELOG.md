@@ -3,20 +3,8 @@ All Notable changes to `oauth2-apple` will be documented in this file
 
 ## 0.4.1 - 2021-02-24
 
-### Added
-- Support php 7.4
-
-### Deprecated
-- Nothing
-
 ### Fixed
 - Support php 7.4
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
 
 ## [0.4.0] - 2021-01-15
 ### Changed

@@ -1,6 +1,11 @@
 # Changelog
 All Notable changes to `oauth2-apple` will be documented in this file
 
+## 0.4.1 - 2021-02-24
+
+### Fixed
+- Support php 7.4
+
 ## [0.4.0] - 2021-01-15
 ### Changed
 * Lowercase composer name

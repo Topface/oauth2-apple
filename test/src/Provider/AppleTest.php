@@ -2,6 +2,7 @@
 
 namespace League\OAuth2\Client\Test\Provider;
 
+use DateTimeImmutable;
 use Exception;
 use GuzzleHttp\Psr7\Response;
 use InvalidArgumentException;
@@ -142,14 +143,14 @@ class AppleTest extends \PHPUnit_Framework_TestCase
 	    ]);
         $provider = m::mock($provider);
 
-	    $time = time();
+	    $DateTimeImmutable = new DateTimeImmutable();
 	    $token = (new Builder())
 		    ->issuedBy('test-team-id')
 		    ->permittedFor('https://appleid.apple.com')
-		    ->issuedAt($time)
-		    ->expiresAt($time + 600)
+		    ->issuedAt($DateTimeImmutable)
+		    ->expiresAt($DateTimeImmutable->setTimestamp(time() + 600))
 		    ->relatedTo('test-client')
-		    ->withClaim('sub', 'test')
+		    ->set('sub', 'test')
 		    ->withHeader('alg', 'RS256')
 		    ->withHeader('kid', 'test')
 		    ->getToken();
